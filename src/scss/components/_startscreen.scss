@@ -1,0 +1,11 @@
+.start-screen {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../assets/start-screen.png);
+  min-height: 80vh;
+  width: 100%;
+
+  .start-button {
+    cursor: pointer;
+  }
+}
