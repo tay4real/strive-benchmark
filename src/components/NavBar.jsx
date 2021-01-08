@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Navbar, Nav, NavDropdown, Image, Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Navbar, Image, Container } from "react-bootstrap";
 
 class NavBar extends Component {
   render() {
@@ -15,6 +14,7 @@ class NavBar extends Component {
               <Image
                 className="img-fluid logo"
                 src="./assets/images/benchmark-logo.png"
+                alt="Benchmark logo"
               />
             </Navbar.Brand>
           </Navbar>

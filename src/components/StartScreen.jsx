@@ -14,6 +14,7 @@ class StartScreen extends Component {
               <img
                 className="img-fluid start-button"
                 src="./assets/images/start-button.png"
+                alt="Start Button"
               />
             </div>
           </div>

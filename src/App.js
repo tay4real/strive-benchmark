@@ -11,9 +11,23 @@ class App extends Component {
 
   handleStartExam = () => {
     this.setState((prevState) => ({
+      showModal: false,
+      examQuestions: [],
+      isLoading: true,
       startExam: !prevState.startExam,
+      errors: null,
     }));
   };
+
+  async componentDidMount() {
+    const url = "http://localhost:3001/exams/start";
+    const response = await fetch(url);
+    const data = await response.json();
+    this.setState({
+      examQuestions: data.data,
+      isLoading: false,
+    });
+  }
 
   render() {
     return (
