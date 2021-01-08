@@ -1,2 +1,3 @@
 # strive-benchmark
- Assessment & Benchmarking Platform React JS Application
+
+Assessment & Benchmarking Platform React JS Application
