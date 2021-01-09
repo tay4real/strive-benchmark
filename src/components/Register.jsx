@@ -27,7 +27,7 @@ class Register extends Component {
   loadExam = async () => {
     try {
       console.log(localStorage.getItem("name"));
-      const resp = await fetch(process.env.REACT_APP_BE + "exams/start", {
+      const resp = await fetch(process.env.REACT_APP_BE + "/exams/start", {
         method: "POST",
         body: JSON.stringify({
           candidateName: localStorage.getItem("name"),
