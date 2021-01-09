@@ -1,0 +1,53 @@
+.register {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../assets/background-2.png);
+  min-height: 80vh;
+  width: 100%;
+
+  .register-button {
+    background-color: #00de83;
+    border: none;
+    padding: 0.5rem 0;
+    border-radius: 25rem;
+    font-size: 2rem;
+    color: #000000;
+  }
+
+  .register-button:hover {
+    background: linear-gradient(180deg, #00de85 0%, #057548 115.74%);
+    color: #000000;
+  }
+
+  .cancel {
+    background-color: #de2800;
+    border: none;
+    padding: 0.5rem 0;
+    border-radius: 25rem;
+    font-size: 2rem;
+    color: #ffffff;
+  }
+
+  .cancel:hover {
+    background: linear-gradient(180deg, #de2800 0%, #7c3b3f 115.74%);
+    color: #ffffff;
+  }
+
+  .pad {
+    padding-top: 8rem;
+  }
+
+  .input-text {
+    border: none;
+    border-bottom: 1px solid #00de83;
+  }
+
+  .input-text:focus {
+    border: none;
+  }
+
+  .header,
+  .footer {
+    background-color: #0f0e0f;
+  }
+}
