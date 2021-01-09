@@ -38,13 +38,12 @@ class Register extends Component {
       });
       if (resp.ok) {
         let examQuestions = await resp.json();
-        setTimeout(() => {
-          this.setState({
-            examQuestions,
-            loading: false,
-            error: null,
-          });
-        }, 500);
+        console.log(examQuestions);
+        this.setState({
+          examQuestions,
+          loading: false,
+          error: null,
+        });
       } else {
         this.setState({
           loading: false,
