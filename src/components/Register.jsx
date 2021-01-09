@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Form, Button, Card } from "react-bootstrap";
 
 class Register extends Component {
-  state = { candidateName: "" };
+  state = { examQuestions: [], loading: true, examLoading: null, error: null };
 
   handleInputChange = (e) => {
     const name = e.currentTarget.name;
@@ -37,11 +37,14 @@ class Register extends Component {
         }),
       });
       if (resp.ok) {
-        console.log(resp);
-        this.setState({
-          isLoading: false,
-          error: null,
-        });
+        let examQuestions = await resp.json();
+        setTimeout(() => {
+          this.setState({
+            examQuestions,
+            loading: false,
+            error: null,
+          });
+        }, 500);
       } else {
         this.setState({
           loading: false,
