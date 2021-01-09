@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Form, Button, Card } from "react-bootstrap";
 
 class Register extends Component {
-  state = { examQuestions: [], loading: true, examLoading: null, error: null };
+  state = { examQuestions: [], loading: null, error: null };
 
   handleInputChange = (e) => {
     const name = e.currentTarget.name;
