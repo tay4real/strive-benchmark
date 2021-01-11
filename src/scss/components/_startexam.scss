@@ -1,8 +1,27 @@
-.register {
+.start-exam {
   min-height: 80vh;
   width: 100%;
 
-  .register-button {
+  .option-button {
+    background-color: #ffffff;
+    border: 1px solid #00de83;
+    padding: 0.5rem 0;
+    border-radius: 25rem;
+    font-size: 2rem;
+    color: #000000;
+  }
+
+  .option-button:hover {
+    background: linear-gradient(180deg, #00de85 0%, #057548 115.74%);
+    color: #000000;
+  }
+
+  .option-button::selection {
+    background: linear-gradient(180deg, #00de85 0%, #057548 115.74%);
+    color: #000000;
+  }
+
+  .proceed {
     background-color: #00de83;
     border: none;
     padding: 0.5rem 0;
@@ -11,23 +30,9 @@
     color: #000000;
   }
 
-  .register-button:hover {
+  .proceed:hover {
     background: linear-gradient(180deg, #00de85 0%, #057548 115.74%);
     color: #000000;
-  }
-
-  .cancel {
-    background-color: #de2800;
-    border: none;
-    padding: 0.5rem 0;
-    border-radius: 25rem;
-    font-size: 2rem;
-    color: #ffffff;
-  }
-
-  .cancel:hover {
-    background: linear-gradient(180deg, #de2800 0%, #7c3b3f 115.74%);
-    color: #ffffff;
   }
 
   .input-text {
@@ -42,5 +47,11 @@
   .header,
   .footer {
     background-color: #0f0e0f;
+  }
+
+  .title {
+    top: 0;
+    right: 0;
+    z-index: 1000;
   }
 }

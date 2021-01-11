@@ -8,24 +8,23 @@ class StartScreen extends Component {
     return (
       <>
         <Helmet>
-          <title>Strive Benchmark</title>
+          <title>Benchmark | Assess your skill level</title>
         </Helmet>
         <Container>
-          <div className="start-screen">
-            <div className="row pad">
-              <div
-                className="mx-auto position-relative"
-                onClick={this.props.handleStartExam}
-              >
-                <Link to="/register">
-                  <img
-                    className="img-fluid start-button"
-                    src="./assets/images/start-button.png"
-                    alt="Start Button"
-                    onClick={this.props.openRegisterModal}
-                  />
-                </Link>
-              </div>
+          <div className="start-screen d-flex flex-column justify-content-center align-items-center">
+            <div className="onboard text-center">
+              Welcome to Strive <br /> Benchmark Platform{" "}
+              <span>Assess your skill level</span>
+            </div>
+            <div className="" onClick={this.props.handleStartExam}>
+              <Link to="/register">
+                <img
+                  className="img-fluid start-button"
+                  src="./assets/images/start-button.png"
+                  alt="Start Button"
+                  onClick={this.props.openRegisterModal}
+                />
+              </Link>
             </div>
           </div>
         </Container>

@@ -1,10 +1,23 @@
 .start-screen {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(../assets/start-screen.png);
   min-height: 80vh;
   width: 100%;
 
+  .onboard {
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    font-size: 50px;
+    line-height: 0.7;
+    font-variant-caps: all-petite-caps;
+    color: #00de85;
+    span {
+      font-size: 20px;
+      color: white;
+      font-variant-caps: normal;
+      display: block;
+      line-height: 3;
+    }
+  }
   .start-button {
     cursor: pointer;
   }

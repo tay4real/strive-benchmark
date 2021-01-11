@@ -1,6 +1,5 @@
 body {
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
-    Helvetica Neue, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 14px;
   line-height: 1.43;
   color: #484848;
@@ -31,4 +30,11 @@ body {
   background-position: center;
   background-image: url(../assets/background.png);
   min-height: 100vh;
+}
+
+.screen-bg {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../assets/screen-bg.png);
 }

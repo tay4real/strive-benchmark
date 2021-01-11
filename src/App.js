@@ -3,63 +3,45 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
-import Register from "./components/Register";
+
 import StartScreen from "./components/StartScreen";
+import Register from "./components/Register";
 import StartExam from "./components/StartExam";
 
 class App extends Component {
   state = {
-    showRegisterModal: false,
-    examQuestions: [],
-    isLoading: true,
+    candidateName: "",
     examStarted: false,
     errors: null,
   };
 
-  handleShowRegisterModal = () => {
-    this.setState({ showRegisterModal: true });
-  };
-  handleHideRegisterModal = () => {
-    this.setState({ showRegisterModal: false });
-  };
   handleStartExam = () => {
     this.setState((prevState) => ({
       examStarted: !prevState.examStarted,
     }));
   };
 
+  componentDidMount() {
+    this.setState({
+      candidateName: "",
+    });
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.candidateName !== this.state.candidateName) {
+      this.setUserName();
+    }
+  }
+
   render() {
-    const { showRegisterModal } = this.state;
     return (
       <div className="App">
         <Router>
-          <NavBar />
-          <Route
-            path="/"
-            exact
-            render={(routerProps) => (
-              <StartScreen
-                {...routerProps}
-                examStarted={this.state.examStarted}
-                handleStartExam={this.handleStartExam}
-                openRegisterModal={this.handleShowRegisterModal}
-              />
-            )}
-          />
-
-          <Route exact path="/register" component={Register} />
-
-          <Route
-            path="/examstart"
-            exact
-            render={(routerProps) => (
-              <StartExam
-                {...routerProps}
-                showRegisterModal={showRegisterModal}
-                closeRegisterModal={this.handleHideRegisterModal}
-              />
-            )}
-          />
+          <NavBar name={this.state.candidateName} />
+          <div className="screen-bg">
+            <Route exact path="/" component={StartScreen} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/startexam" component={StartExam} />
+          </div>
         </Router>
       </div>
     );
